@@ -1,8 +1,8 @@
 // const authMiddleware = require('../middlewares/auth');
-import express from 'express';
+import express from "express";
+import chatRouter from "./chat.router.js";
 const router = express.Router();
-router.use('/auth', (req,res)=>{
-res.json({code:1 , result:'ok'})
-});
+
+router.use("/chat", chatRouter);
 
 export default router;

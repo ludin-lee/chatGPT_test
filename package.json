@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pm2 start ecosystem.config.cjs --only mafia-game-dev --env dev",
+    "restart": "pm2 reload ecosystem.config.cjs --only mafia-game-dev --env dev",
     "start": "pm2 start ecosystem.config.cjs --only mafia-game-prod --env prod",
-    "del" : "pm2 delete all" 
+    "del": "pm2 delete all"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,13 @@
   "homepage": "https://github.com/ludin-lee/chatGPT_test#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
-    "socket.io": "^4.6.1"
+    "openai": "^3.2.1",
+    "socket.io": "^4.6.1",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
   },
   "type": "module"
 }
